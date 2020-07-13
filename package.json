@@ -20,14 +20,6 @@
     "build-storybook-docs": "build-storybook -s public --docs",
     "release": "npm publish"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,10 +31,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "singleQuote": true
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.2.1",
