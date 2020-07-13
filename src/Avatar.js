@@ -82,17 +82,17 @@ const Initial = styled.div`
   font-size: ${typography.size.s2}px;
   line-height: ${sizes.medium}px;
 
-  ${props => props.size === "tiny" && css`
+  ${props => props.size === 'tiny' && css`
     font-size: ${typography.size.s1 - 2}px;
     line-height: ${sizes.tiny}px;
   `}
 
-  ${props => props.size === "small" && css`
+  ${props => props.size === 'small' && css`
     font-size: ${typography.size.s1}px;
     line-height: ${sizes.small}px;
   `}
 
-  ${props => props.size === "large" && css`
+  ${props => props.size === 'large' && css`
     font-size: ${typography.size.s3}px;
     line-height: ${sizes.large}px;
   `}
@@ -102,7 +102,7 @@ const Initial = styled.div`
  * Use an avatar for attributing actions or content to specific users.
  *   The user’s name should always be present when using Avatar – either printed beside
  *   the avatar or in a tooltip.
- **/
+ * */
 export function Avatar({ loading, username, src, size, ...props }) {
   let avatarFigure = <Icon icon="useralt" />;
   const a11yProps = {};
@@ -130,7 +130,7 @@ export function Avatar({ loading, username, src, size, ...props }) {
 
 Avatar.propTypes = {
   /**
-   Use the loading state to indicate that the data Avatar needs is still loading. 
+   Use the loading state to indicate that the data Avatar needs is still loading.
   */
   loading: PropTypes.bool,
   /**
@@ -142,7 +142,7 @@ Avatar.propTypes = {
   */
   src: PropTypes.string,
   /**
-   Avatar comes in four sizes. In most cases, you’ll be fine with `medium`. 
+   Avatar comes in four sizes. In most cases, you’ll be fine with `medium`.
   */
   size: PropTypes.oneOf(Object.keys(sizes)),
 };

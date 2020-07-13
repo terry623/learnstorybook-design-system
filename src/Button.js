@@ -314,16 +314,13 @@ const StyledButton = styled.button`
 
 const ButtonLink = StyledButton.withComponent('a');
 
-const applyStyle = ButtonWrapper => {
-  return (
-    ButtonWrapper &&
-    StyledButton.withComponent(
-      ({ containsIcon, isLoading, isUnclickable, ...rest }) => (
-        <ButtonWrapper {...rest} />
-      )
+const applyStyle = ButtonWrapper =>
+  ButtonWrapper &&
+  StyledButton.withComponent(
+    ({ containsIcon, isLoading, isUnclickable, ...rest }) => (
+      <ButtonWrapper {...rest} />
     )
   );
-};
 
 export function Button({
   isDisabled,

@@ -144,23 +144,20 @@ const LinkButton = styled.button`
   ${linkStyles};
 `;
 
-const applyStyle = LinkWrapper => {
-  return (
-    LinkWrapper &&
-    styled(
-      ({
-        containsIcon,
-        inverse,
-        nochrome,
-        secondary,
-        tertiary,
-        ...linkWrapperRest
-      }) => <LinkWrapper {...linkWrapperRest} />
-    )`
-      ${linkStyles};
-    `
-  );
-};
+const applyStyle = LinkWrapper =>
+  LinkWrapper &&
+  styled(
+    ({
+      containsIcon,
+      inverse,
+      nochrome,
+      secondary,
+      tertiary,
+      ...linkWrapperRest
+    }) => <LinkWrapper {...linkWrapperRest} />
+  )`
+    ${linkStyles};
+  `;
 
 /**
  * Links can contains text and/or icons. Be careful using only icons, you must provide a text alternative via aria-label for accessibility.
